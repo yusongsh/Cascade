@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./Navbar.js";
+import NavBar from "./Navbar";
 
 const Layout = ({ children, backgroundColor }) => {
   return (

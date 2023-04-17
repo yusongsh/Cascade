@@ -11,11 +11,11 @@ const Navbar = () => {
   const navItems = [
     { title: "Services", to: "/services" },
     { title: "Packages", to: "/packages" },
-    { title: "Plan Your Day", to: "/plan-your-day" },
+    { title: "Plan Your Day", to: "/planyourday" },
     { title: "Gallery", to: "/gallery" },
     { title: "Contact", to: "/contact" },
     { title: "About", to: "/about" },
-    { title: "Facials & More", to: "/facials-more" },
+    { title: "Facials & More", to: "/facial" },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
           Cascade Spa
         </Link>
 
-        <button className="sm:hidden block" onClick={toggleMenu}>
+        <button className="lg:hidden block" onClick={toggleMenu}>
           <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
             {!isOpen ? (
               <svg
@@ -66,15 +66,10 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } text-lg sm:flex sm:items-center gap-8`}
+          } text-base font-light font-title uppercase lg:flex lg:items-center gap-8`}
         >
           {navItems.map((item) => (
-            <Link
-              key={item.title}
-              to={item.to}
-              className="relative block hover:text-main-grey nav-link"
-              activeClassName="active-link"
-            >
+            <Link key={item.title} to={item.to} className="relative block">
               {item.title}
             </Link>
           ))}
@@ -104,7 +99,7 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center justify-center h-full space-y-4">
+          <div className="flex flex-col items-center justify-center h-full space-y-4 text-base font-light font-title uppercase ">
             {navItems.map((item) => (
               <Link
                 key={item.title}
@@ -115,7 +110,6 @@ const Navbar = () => {
                 {item.title}
               </Link>
             ))}
-            {/* Your existing social icons code */}
           </div>
         </div>
       )}

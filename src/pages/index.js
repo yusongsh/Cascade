@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../componets/Layout";
+import Layout from "../components/Layout";
 import { Link, graphql } from "gatsby";
 
 const IndexPage = () => {
   return (
     <Layout>
       <div>
-        <h1>Home</h1>
+        <h1 className="text-3xl">Home</h1>
         {/* Use other data properties in a similar manner */}
       </div>
     </Layout>
