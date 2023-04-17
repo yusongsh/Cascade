@@ -1,44 +1,18 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import Layout from "../componets/Layout";
+import { Link, graphql } from "gatsby";
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      contentfulHomepage {
-        address {
-          lat
-          lon
-        }
-        announcement {
-          announcement
-        }
-        businessHours {
-          businessHours
-        }
-        facebook
-        instagram
-        id
-        yelp
-        validateParking
-        twitter
-        phone
-        parking
-      }
-    }
-  `);
-
-  const homepage = data.contentfulHomepage;
-  console.log(homepage);
-
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Phone: {homepage.phone}</p>
-      {/* Use other data properties in a similar manner */}
-    </div>
+    <Layout>
+      <div>
+        <h1>Home</h1>
+        {/* Use other data properties in a similar manner */}
+      </div>
+    </Layout>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Home - Cascade Spa</title>;
