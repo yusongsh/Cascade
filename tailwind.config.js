@@ -11,6 +11,10 @@ module.exports = {
         title: ["Poppins", "sans-serif"],
         sans: ["Raleway", "sans-serif"],
       },
+      colors: {
+        "main-grey": "#474a4a",
+        "main-gold": "#C2936A",
+      },
     },
     plugins: [],
   },

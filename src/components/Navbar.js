@@ -1,16 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
+import logo from "../images/Cascade-logo.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navItems = [
     { title: "Services", to: "/services" },
-    { title: "Packages", to: "/packages" },
+    { title: "Packages", to: "/package" },
     { title: "Plan Your Day", to: "/planyourday" },
     { title: "Gallery", to: "/gallery" },
     { title: "Contact", to: "/contact" },
@@ -19,14 +38,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 bg-white z-10">
-      <div className="py-6 flex justify-between items-center">
+    <nav
+      className={`px-4 md:px-16 lg:px-40 sticky top-0 ${
+        isScrolled ? "bg-main-grey/50" : "bg-main-grey"
+      } z-10`}
+    >
+      <div className="py-4 max-w-[1080px] flex justify-between items-center">
         <Link to="/" className="">
-          Cascade Spa
+          <img src={logo} alt="cascade logo" className="w-28 h-auto" />
         </Link>
 
         <button className="lg:hidden block" onClick={toggleMenu}>
-          <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <svg className="h-8 w-8 fill-current" viewBox="0 0 24 24">
             {!isOpen ? (
               <svg
                 className="block h-5 w-5"
@@ -78,12 +101,12 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="fixed inset-0 z-10 bg-white opacity-100">
-          <Link to="/" className="absolute top-6 left-5">
-            Cascade Spa
-          </Link>
-          <button className="absolute top-6 right-5" onClick={toggleMenu}>
+          <button
+            className="absolute top-6 right-4 md:right-16"
+            onClick={toggleMenu}
+          >
             <svg
-              className="block h-6 w-6"
+              className="block h-8 w-8"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -99,12 +122,12 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center justify-center h-full space-y-4 text-base font-light font-title uppercase ">
+          <div className="flex flex-col items-center justify-center h-full space-y-4 text-2xl font-extralight font-title uppercase ">
             {navItems.map((item) => (
               <Link
                 key={item.title}
                 to={item.to}
-                className="hover:line-through"
+                className="active:text-orange-300"
                 onClick={toggleMenu}
               >
                 {item.title}
