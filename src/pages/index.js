@@ -35,7 +35,7 @@ const IndexPage = () => {
   console.log(homepage);
 
   return (
-    <Layout>
+    <Layout phone={homepage.phone}>
       <main className="pt-[-40px]">
         <section className="">
           <img
