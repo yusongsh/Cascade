@@ -3,7 +3,10 @@ import Layout from "../components/Layout";
 import homeHero from "../images/Cascade Spa Images-16.jpg";
 import CascadeBird from "../assets/Cascade_birds.png";
 import homesection from "../assets/Cascade Spa Images-28.jpg";
+import serviceimage from "../images/cascade-service.jpg";
+import packageimage from "../images/Cascade-service-2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -85,7 +88,7 @@ const IndexPage = () => {
           </button>
         </section>
 
-        <section className="lg:py-24 px-6 max-w-5xl flex flex-col lg:flex-row gap-16 lg:gap-12 justify-center items-center m-auto">
+        <section className="py-8 lg:py-24 px-6 max-w-5xl flex flex-col lg:flex-row gap-16 lg:gap-12 justify-center items-center m-auto">
           <div className="w-full lg:w-1/2">
             <img
               src={homesection}
@@ -131,6 +134,98 @@ const IndexPage = () => {
                   return <p key={idx}>{phone}</p>;
                 })}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
+          <div className="relative w-80 h-auto">
+            <img
+              src={Tiltlebg}
+              alt="section title hero bg"
+              className="w-80 h-auto object-cover"
+            />
+            <div className="absolute z-10 inset-0 flex items-center justify-center">
+              <span className="text-white text-[1.4rem] font-titleBig">
+                OUR SERVICES
+              </span>
+            </div>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-20 py-16">
+            <div className="w-80 h-auto bg-main-bg-service shadow-md">
+              <div className="h-[45%] overflow-hidden">
+                <img
+                  src={serviceimage}
+                  alt="your image description"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
+              <Link to="/services">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
+                  <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
+                    SERVICES
+                  </h2>
+                  <p className="text-xs text-center font-thin">
+                    With our highly trained and certified therapists, we
+                    understand your body's healing needs. We provide a wide
+                    variety of exceptional services include massage,
+                    reflexology, and spa treatments.
+                  </p>
+                </div>
+              </Link>
+            </div>
+            <div className="w-80 h-auto bg-main-bg-service shadow-md">
+              <div className="h-[45%] overflow-hidden">
+                <img
+                  src={packageimage}
+                  alt="your image description"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
+              <Link to="/packages">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
+                  <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
+                    PACKAGES
+                  </h2>
+                  <p className="text-xs text-center font-thin">
+                    Whatever your reason for visiting, there is always a package
+                    fits your needs - from a Head-to-Toe, our packages include
+                    multiple great valued services that will guarantee your body
+                    a total relaxation or we can customize something for you.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
+          <div className="relative w-80 h-auto">
+            <img
+              src={Tiltlebg}
+              alt="section title hero bg"
+              className="w-80 h-auto object-cover"
+            />
+            <div className="absolute z-10 inset-0 flex items-center justify-center">
+              <span className="text-white text-[1.4rem] font-titleBig">
+                STAY CONNECTED
+              </span>
+            </div>
+          </div>
+          <div className="pt-4 font-thin text-sm opacity-50">
+            <p>Sign up to receive email promotions, spa news, and more.</p>
+          </div>
+          <div className="w-full bg-main-bg-service h-48 mt-16 mb-8 flex items-center justify-center">
+            <div className="flex">
+              <input
+                type="text"
+                placeholder="Enter your email here*"
+                className="border-gray-400 text-sm pl-6 pr-20 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
+              />
+              <button className="bg-main-gold text-white px-6 py-4 text-sm">
+                Sign Up
+              </button>
             </div>
           </div>
         </section>
