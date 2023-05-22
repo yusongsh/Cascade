@@ -11,25 +11,9 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const navItems = [
     { title: "Services", to: "/services" },
-    { title: "Packages", to: "/package" },
+    { title: "Packages", to: "/packages" },
     { title: "Plan Your Day", to: "/planyourday" },
     { title: "Gallery", to: "/gallery" },
     { title: "Contact", to: "/contact" },
@@ -39,9 +23,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`px-4 md:px-16 lg:px-40 sticky top-0 ${
-        isScrolled ? "bg-main-grey/50" : "bg-main-grey"
-      } z-10`}
+      className={`px-4 md:px-16 lg:px-40 sticky top-0 bg-main-bg-service/70
+     z-10`}
     >
       <div className="py-4 max-w-[1080px] flex justify-between items-center">
         <Link to="/" className="">
@@ -92,7 +75,11 @@ const Navbar = () => {
           } text-base font-light font-title uppercase lg:flex lg:items-center gap-8`}
         >
           {navItems.map((item) => (
-            <Link key={item.title} to={item.to} className="relative block">
+            <Link
+              key={item.title}
+              to={item.to}
+              className="relative block transition-colors duration-500 ease-in-out hover:text-main-gold"
+            >
               {item.title}
             </Link>
           ))}
@@ -100,13 +87,13 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-10 bg-white opacity-100">
+        <div className="fixed inset-0 z-10 bg-white font-black opacity-100">
           <button
             className="absolute top-6 right-4 md:right-16"
             onClick={toggleMenu}
           >
             <svg
-              className="block h-8 w-8"
+              className="block h-8 w-8 text-black"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -122,12 +109,12 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <div className="flex flex-col items-center justify-center h-full space-y-4 text-2xl font-extralight font-title uppercase ">
+          <div className="flex flex-col items-center justify-center h-full space-y-4 text-2xl font-light font-title uppercase ">
             {navItems.map((item) => (
               <Link
                 key={item.title}
                 to={item.to}
-                className="active:text-orange-300"
+                className="text-black hover:text-main-gold"
                 onClick={toggleMenu}
               >
                 {item.title}

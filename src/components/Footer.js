@@ -16,9 +16,8 @@ const Footer = ({ phone }) => {
           <div className="flex flex-col items-end py-6">
             <p>3838 5th Ave, San Diego, CA</p>
             <div>
-              {phone.map((phone, idx) => {
-                return <p key={idx}>{phone}</p>;
-              })}
+              <p>(619) 542-9778</p>
+              <p>(619) 326-8029</p>
             </div>
             <p>Call to Reserve Appointment!</p>
           </div>

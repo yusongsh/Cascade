@@ -4,9 +4,9 @@ import Footer from "./Footer";
 
 const Layout = ({ children, backgroundColor, phone }) => {
   return (
-    <div className="w-full">
-      <NavBar />
-      <div>{children}</div>
+    <div className="relative w-full">
+      <NavBar className="absolute top-0 w-full z-50" />
+      <div className="-mt-20">{children}</div>
       <Footer phone={phone} />
     </div>
   );

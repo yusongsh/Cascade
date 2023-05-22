@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-const PackagePage = () => {
+const PackagesPage = () => {
   return (
     <div>
       <h1>Package</h1>
@@ -10,6 +10,6 @@ const PackagePage = () => {
   );
 };
 
-export default PackagePage;
+export default PackagesPage;
 
 export const Head = () => <title>Packages - Cascade Spa</title>;

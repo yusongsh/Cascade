@@ -35,7 +35,10 @@ const IndexPage = () => {
   `);
 
   const homepage = data.contentfulHomepage;
-  console.log(homepage);
+  console.log(homepage.parking);
+
+  const address = homepage.parking;
+  const [street, spots] = address.split(" Spots ");
 
   return (
     <Layout phone={homepage.phone}>
@@ -53,13 +56,13 @@ const IndexPage = () => {
             <img src={CascadeBird} className="w-[13rem] h-auto" />
           </div>
 
-          <h2 className="text-lg font-title font-extralight">
+          <h2 className="text-lg font-title font-extralight tracking-wide">
             WE GLADY ACCEPT APPOINTMENTS
           </h2>
-          <h1 className="py-12 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
+          <h1 className="py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
             <span>Refresh,</span> <span>Relax, Rejuvenate</span>
           </h1>
-          <div className="px-6 container flex flex-col items-center gap-4 lg:gap-6 text-center max-w-3xl font-title text-sm font-extralight lg:text-base">
+          <div className="px-6 container flex flex-col items-center gap-4 lg:gap-6 text-center max-w-4xl font-title text-sm font-extralight lg:text-base">
             <p>
               We invite our guests to indulge in the ultimate upscale RESORT
               which is centrally located in the heart of Hillcrest. Enveloped in
@@ -88,48 +91,70 @@ const IndexPage = () => {
           </button>
         </section>
 
-        <section className="py-8 lg:py-24 px-6 max-w-5xl flex flex-col lg:flex-row gap-16 lg:gap-12 justify-center items-center m-auto">
-          <div className="w-full lg:w-1/2">
+        <section className="py-8 lg:py-24 px-6 max-w-6xl flex flex-col md:flex-row gap-8 lg:gap-12 justify-center items-center m-auto">
+          <div className="w-full md:w-1/2 h-auto lg:h-[36rem]">
             <img
               src={homesection}
               alt="home hero bg"
-              className="w-full lg:max-h-[650px] object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
 
-          <div className="flex flex-col lg:w-1/2">
-            <div className="grid grid-cols-2 gap-4">
-              <h4 className="uppercase">Address</h4>
-              <p>3838 5th Ave San Diego, 92103</p>
+          <div className="flex flex-col w-full md:w-1/2 text-lg font-extralight gap-6">
+            <div className="grid grid-cols-3 gap-4">
+              <h4 className="uppercase flex flex-col items-center">Address</h4>
+              <div className="col-span-2">
+                <p>3838 5th Ave</p>
+                <p>San Diego, 92103</p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <h4 className="uppercase flex flex-col">
-                Parking<span>Free</span>
-              </h4>
-              <p>{homepage.parking}</p>
+            <div className="col-span-3 border-b border-main-gold w-full lg:w-10/12 lg:ml-4"></div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div className="flex flex-col items-center">
+                <div className="uppercase text-center">Parking</div>
+                <div className="text-sm text-center">Free</div>
+              </div>
+              <p className="col-span-2">
+                {street}
+                <br />
+                Spots {spots}
+              </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="uppercase flex flex-col">
+            <div className="col-span-3 border-b border-main-gold w-full lg:w-10/12 lg:ml-4"></div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <div className="uppercase flex flex-col items-center">
                 <p>validate</p>
                 <p>Parking</p>
-                <p>1HR</p>
+                <p className="text-sm">1HR</p>
               </div>
-              <p>{homepage.validateParking}</p>
+              <p className="col-span-2">{homepage.validateParking}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <h4 className="uppercase">Hours</h4>
-              <div>
-                <p>Monday - Thursday 10AM-10PM</p>
-                <p>Friday - Sunday 9AM-10PM</p>
+            <div className="col-span-3 border-b border-main-gold w-full lg:w-10/12 lg:ml-4"></div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <h4 className="uppercase flex flex-col items-center">Hours</h4>
+              <div className="col-span-2">
+                <div className="pb-4">
+                  <p>Monday - Thursday</p>
+                  <p>10AM-10PM</p>
+                </div>
+                <div>
+                  <p>Friday - Sunday</p>
+                  <p>9AM-10PM</p>
+                </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <h4 className="uppercase">Phone</h4>
-              <div>
+            <div className="col-span-3 border-b border-main-gold w-full lg:w-10/12 lg:ml-4"></div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <h4 className="uppercase flex flex-col items-center">Phone</h4>
+              <div className="col-span-2">
                 {homepage.phone.map((phone, idx) => {
                   return <p key={idx}>{phone}</p>;
                 })}
