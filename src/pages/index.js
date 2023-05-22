@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
-import homeHero from "../images/Cascade Spa Images-16.jpg";
 import CascadeBird from "../assets/Cascade_birds.png";
 import homesection from "../assets/Cascade Spa Images-28.jpg";
+import Carousel from "../components/Carousal";
 import serviceimage from "../images/cascade-service.jpg";
 import packageimage from "../images/Cascade-service-2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
@@ -44,11 +44,7 @@ const IndexPage = () => {
     <Layout phone={homepage.phone}>
       <main className="pt-[-40px]">
         <section className="">
-          <img
-            src={homeHero}
-            alt="home hero bg"
-            className="w-full lg:max-h-[650px] object-cover"
-          />
+          <Carousel />
         </section>
 
         <section className="py-24 flex flex-col items-center">

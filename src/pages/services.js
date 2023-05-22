@@ -1,7 +1,7 @@
 import React from "react";
 import serviceHero from "../assets/Cascade_Spa_Images-13.jpg";
 import CascadeCage from "../assets/Cascade-bird-cage-1.webp";
-
+import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Layout from "../components/Layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
@@ -40,12 +40,24 @@ const ServicesPage = () => {
 
   return (
     <Layout>
-      <section className="">
+      <section className="relative">
         <img
           src={serviceHero}
           alt="home hero bg"
-          className="w-full lg:max-h-[550px] object-cover"
+          className="w-full lg:max-h-[400px] object-cover"
         />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-auto">
+          <img
+            src={Tiltlebg}
+            alt="section title hero bg"
+            className="w-80 h-auto object-cover"
+          />
+          <div className="absolute z-10 inset-0 flex items-center justify-center">
+            <span className="text-white text-[1.8rem] lg:text-[2rem] font-titleBig">
+              SERVICES
+            </span>
+          </div>
+        </div>
       </section>
 
       <section className="max-w-5xl mx-auto">
