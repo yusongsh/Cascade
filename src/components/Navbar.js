@@ -23,15 +23,15 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`px-4 md:px-16 lg:px-40 sticky top-0 bg-main-bg-service/70
+      className={`px-4 md:px-16 lg:px-32 sticky top-0 bg-main-bg-service/70
      z-10`}
     >
-      <div className="py-4 max-w-[1080px] flex justify-between items-center">
+      <div className="py-4 max-w-[1440px] mx-auto flex justify-between items-center">
         <Link to="/" className="">
           <img src={logo} alt="cascade logo" className="w-28 h-auto" />
         </Link>
 
-        <button className="lg:hidden block" onClick={toggleMenu}>
+        <button className="xl:hidden block" onClick={toggleMenu}>
           <svg className="h-8 w-8 fill-current" viewBox="0 0 24 24">
             {!isOpen ? (
               <svg
@@ -72,7 +72,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } text-base font-light font-title uppercase lg:flex lg:items-center gap-8`}
+          } text-base font-light font-title uppercase xl:flex xl:items-center gap-8`}
         >
           {navItems.map((item) => (
             <Link

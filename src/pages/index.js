@@ -48,7 +48,7 @@ const IndexPage = () => {
         </section>
 
         <section className="py-24 flex flex-col items-center">
-          <div className="-z-10 container absolute opacity-40 lg:opacity-80 left-[10%] md:left-[15%] lg:left-[25%]">
+          <div className="-z-10 absolute opacity-40 lg:opacity-80 left-[10%] md:left-[15%] lg:left-[25%]">
             <img src={CascadeBird} className="w-[13rem] h-auto" />
           </div>
 
@@ -58,7 +58,7 @@ const IndexPage = () => {
           <h1 className="py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
             <span>Refresh,</span> <span>Relax, Rejuvenate</span>
           </h1>
-          <div className="px-6 container flex flex-col items-center gap-4 lg:gap-6 text-center max-w-4xl font-title text-sm font-extralight lg:text-base">
+          <div className="px-6 flex flex-col items-center gap-4 lg:gap-6 text-center max-w-4xl font-title text-sm font-extralight lg:text-base">
             <p>
               We invite our guests to indulge in the ultimate upscale RESORT
               which is centrally located in the heart of Hillcrest. Enveloped in

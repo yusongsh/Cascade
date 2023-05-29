@@ -1,12 +1,100 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import packageHero from "../assets/Cascade_spa_Image-19.webp";
+import CascadeCage from "../assets/Cascade-bird-cage-1.webp";
+import Tiltlebg from "../assets/Cascadep-Spa-title.png";
+import Layout from "../components/Layout";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 
 const PackagesPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allContentfulPackage {
+        edges {
+          node {
+            name
+            price
+            description {
+              description
+            }
+          }
+        }
+      }
+    }
+  `);
+  const packageData = data.allContentfulPackage.edges;
+  console.log(packageData);
+
+  // const options = {
+  //   renderNode: {
+  //     [BLOCKS.PARAGRAPH]: (node, children) => (
+  //       <p className="text-lg">{children}</p>
+  //     ),
+  //     [INLINES.HYPERLINK]: (node, children) => (
+  //       <a href={node.data.uri}>{children}</a>
+  //     ),
+  //   },
+  // };
+
   return (
-    <div>
-      <h1>Package</h1>
+    <Layout>
+      <section className="relative">
+        <img
+          src={packageHero}
+          alt="home hero bg"
+          className="w-full lg:max-h-[400px] object-cover"
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-auto">
+          <img
+            src={Tiltlebg}
+            alt="section title hero bg"
+            className="w-80 h-auto object-cover"
+          />
+          <div className="absolute z-10 inset-0 flex items-center justify-center">
+            <span className="text-white text-[1.8rem] lg:text-[2rem] font-titleBig">
+              PACKAGES
+            </span>
+          </div>
+        </div>
+      </section>
       {/* Use other data properties in a similar manner */}
-    </div>
+
+      <section className="max-w-5xl mx-auto">
+        <div className="mt-16 mb-8 lg:mb-4">
+          <div className="border-b border-main-gold w-[100%] "></div>
+
+          <div className="flex flex-col justify-between px-4 md:px-8 lg:px-0">
+            <div className="my-8 lg:my-12 uppercase text-2xl lg:text-3xl font-titleBig">
+              PACKAGE
+            </div>
+            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[80%]">
+              <img src={CascadeCage} className="w-[5rem] h-auto" />
+            </div>
+          </div>
+        </div>
+
+        <div className="px-4 md:px-8 lg:px-0 grid-flow-row columns-1 md:columns-2 gap-32">
+          {packageData.map(({ node }, index) => (
+            <div
+              key={index}
+              className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
+            >
+              <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
+                {node.name}
+              </h2>
+              <div className="py-2 text-sm font-extralight text-main-gold italic">
+                {" "}
+                <p>{node.price}</p>
+              </div>
+              <p className="pt-2 font-extralight text-sm lg:text-base">
+                {node.description?.description ?? "No Description"}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </Layout>
   );
 };
 

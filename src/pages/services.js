@@ -64,19 +64,19 @@ const ServicesPage = () => {
         <div className="mt-16 mb-8 lg:mb-4">
           <div className="border-b border-main-gold w-[100%] "></div>
 
-          <div className="flex flex-col justify-between px-4 lg:px-0">
+          <div className="flex flex-col justify-between px-4 md:px-8 lg:px-0">
             <div className="my-8 lg:my-12 uppercase text-2xl lg:text-3xl font-titleBig">
               MASSAGE {""}
               <span className="text-sm  lg:text-base">
                 (Please call for more details.)
               </span>
             </div>
-            <div className="-z-10 container absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[80%]">
+            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[80%]">
               <img src={CascadeCage} className="w-[5rem] h-auto" />
             </div>
           </div>
         </div>
-        <div className="px-4 lg:px-0">
+        <div className="px-4 md:px-8 lg:px-0">
           <div className="grid-flow-row columns-1 md:columns-2 gap-32">
             {servicesData.map(({ node }, index) => (
               <div
@@ -101,14 +101,14 @@ const ServicesPage = () => {
 
         <div className="border-b border-main-gold w-[100%] my-16"></div>
 
-        <div className="px-4 lg:px-0 flex flex-col my-8 lg:my-12 text-2xl lg:text-3xl font-titleBig">
+        <div className="px-4 md:px-8 lg:px-0 flex flex-col my-8 lg:my-12 text-2xl lg:text-3xl font-titleBig">
           <div>SCRUB</div>
           <div className="text-xs font-sans lg:text-sm">
             *Body scrubs are conducted in the gender-separated scrub rooms.
           </div>
         </div>
 
-        <div className="px-4 lg:px-0 grid-flow-row columns-1 md:columns-2 gap-32">
+        <div className="px-4 md:px-8 lg:px-0 grid-flow-row columns-1 md:columns-2 gap-32">
           {scrubData.map(({ node }, index) => (
             <div
               key={index}
@@ -130,7 +130,7 @@ const ServicesPage = () => {
 
         <div className="border-b border-main-gold w-[100%] my-16"></div>
 
-        <div className="px-4 lg:px-0 mb-16 flex flex-row justify-between uppercase text-2xl font-titleBig underline underline-offset-8">
+        <div className="px-4 md:px-8 lg:px-0 mb-16 flex flex-row justify-between uppercase text-2xl font-titleBig underline underline-offset-8">
           <Link to="/packages">Package</Link>
           <Link to="/Facial">Facial</Link>
         </div>
