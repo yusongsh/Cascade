@@ -86,12 +86,12 @@ const ServicesPage = () => {
                 <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
                   {node.name}
                 </h2>
-                <div className="py-2 text-sm font-extralight text-main-gold italic">
+                <div className="py-3 text-sm font-title font-extralight text-main-gold italic">
                   {" "}
                   <p>{node.price1}</p>
                   {node.price2 && <p>{node.price2}</p>}
                 </div>
-                <p className="pt-2 font-extralight text-sm lg:text-base">
+                <p className="pt-2 font-extralight font-title text-sm">
                   {node.description.description}
                 </p>
               </div>
@@ -117,11 +117,10 @@ const ServicesPage = () => {
               <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
                 {node.name}
               </h2>
-              <div className="py-2 text-sm font-extralight text-main-gold italic">
-                {" "}
+              <div className="py-3 text-sm font-title font-extralight text-main-gold italic">
                 <p>{node.price}</p>
               </div>
-              <p className="pt-2 font-extralight text-sm lg:text-base">
+              <p className="pt-2 font-extralight font-title text-sm">
                 {node.description.description}
               </p>
             </div>

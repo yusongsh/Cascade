@@ -78,6 +78,7 @@ const Navbar = () => {
             <Link
               key={item.title}
               to={item.to}
+              activeClassName="text-main-gold" // Active style
               className="relative block transition-colors duration-500 ease-in-out hover:text-main-gold"
             >
               {item.title}

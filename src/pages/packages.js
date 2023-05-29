@@ -13,11 +13,11 @@ const PackagesPage = () => {
       allContentfulPackage {
         edges {
           node {
+            descriptionLong {
+              raw
+            }
             name
             price
-            description {
-              description
-            }
           }
         }
       }
@@ -26,16 +26,24 @@ const PackagesPage = () => {
   const packageData = data.allContentfulPackage.edges;
   console.log(packageData);
 
-  // const options = {
-  //   renderNode: {
-  //     [BLOCKS.PARAGRAPH]: (node, children) => (
-  //       <p className="text-lg">{children}</p>
-  //     ),
-  //     [INLINES.HYPERLINK]: (node, children) => (
-  //       <a href={node.data.uri}>{children}</a>
-  //     ),
-  //   },
-  // };
+  const options = {
+    renderNode: {
+      [BLOCKS.HEADING_5]: (node, children) => (
+        <p className="mb-4 text-sm font-title">{children}</p>
+      ),
+      [BLOCKS.UL_LIST]: (node, children) => (
+        <ul className="list-inside list-none text-sm font-title mb-0">
+          {children}
+        </ul>
+      ),
+      [BLOCKS.LIST_ITEM]: (node, children) => (
+        <li className="flex text-sm font-title">
+          <span className="mr-2">-</span>
+          <span>{children}</span>
+        </li>
+      ),
+    },
+  };
 
   return (
     <Layout>
@@ -83,15 +91,21 @@ const PackagesPage = () => {
               <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
                 {node.name}
               </h2>
-              <div className="py-2 text-sm font-extralight text-main-gold italic">
-                {" "}
+              <div className="py-3 text-sm font-title font-extralight text-main-gold italic">
                 <p>{node.price}</p>
               </div>
-              <p className="pt-2 font-extralight text-sm lg:text-base">
-                {node.description?.description ?? "No Description"}
-              </p>
+              <div className="pt-2 font-extralight text-sm lg:text-base">
+                {renderRichText(node.descriptionLong, options)}
+              </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto text-sm font-title my-12 lg:mt-20 lg:mb-16">
+        <div className="flex flex-col gap-2 lg:flex-row lg:gap-8 px-4 md:px-8 lg:px-0">
+          <p>* Bathing suits required for Jacuzzi.</p>
+          <p>** Must be 21 years or older, ID required</p>
         </div>
       </section>
     </Layout>
