@@ -4,9 +4,10 @@ import CascadeBird from "../assets/Cascade_birds.png";
 import homesection from "../assets/Cascade Spa Images-28.jpg";
 import Carousel from "../components/Carousal";
 import serviceimage from "../images/cascade-service.jpg";
-import packageimage from "../images/Cascade-service-2.jpg";
+import packageimage from "../images/cascade-service 2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
+import Form from "../components/Form";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -49,7 +50,11 @@ const IndexPage = () => {
 
         <section className="py-24 flex flex-col items-center">
           <div className="-z-10 absolute opacity-40 lg:opacity-80 left-[10%] md:left-[15%] lg:left-[25%]">
-            <img src={CascadeBird} className="w-[13rem] h-auto" />
+            <img
+              src={CascadeBird}
+              alt="Cascade Bird"
+              className="w-[13rem] h-auto"
+            />
           </div>
 
           <h2 className="text-lg font-title font-extralight tracking-wide">
@@ -178,7 +183,7 @@ const IndexPage = () => {
               <div className="h-[45%] overflow-hidden">
                 <img
                   src={serviceimage}
-                  alt="your image description"
+                  alt="service background"
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
@@ -200,7 +205,7 @@ const IndexPage = () => {
               <div className="h-[45%] overflow-hidden">
                 <img
                   src={packageimage}
-                  alt="your image description"
+                  alt="package background"
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
@@ -237,18 +242,7 @@ const IndexPage = () => {
           <div className="pt-4 font-thin text-sm opacity-50">
             <p>Sign up to receive email promotions, spa news, and more.</p>
           </div>
-          <div className="w-full bg-main-bg-service h-48 mt-16 mb-8 flex items-center justify-center">
-            <div className="flex">
-              <input
-                type="text"
-                placeholder="Enter your email here*"
-                className="border-gray-400 text-sm pl-6 pr-20 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
-              />
-              <button className="bg-main-gold text-white px-6 py-4 text-sm">
-                Sign Up
-              </button>
-            </div>
-          </div>
+          <Form />
         </section>
       </main>
     </Layout>
