@@ -75,13 +75,21 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="w-full md:w-1/2 h-auto">
-            <img src={Sauna} className="w-full h-auto" />
+            <img
+              src={Sauna}
+              alt="Cascade Steam Sauna"
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
         <div className="px-4 md:px-8 lg:px-0 py-6 lg:py-12 flex flex-col lg:flex-row gap-8">
           <div className="w-full md:w-1/2 h-auto">
-            <img src={SaltSauna} className="w-full h-auto" />
+            <img
+              src={SaltSauna}
+              alt="Cascade Salt Sauna"
+              className="w-full h-auto"
+            />
           </div>
           <div className="flex flex-col justify-center w-full md:w-1/2 text-lg font-extralight gap-6 px-8">
             <div>
@@ -112,13 +120,17 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="w-full md:w-1/2 h-auto">
-            <img src={Jac} className="w-full h-auto" />
+            <img src={Jac} alt="Cascade Jacuzzi" className="w-full h-auto" />
           </div>
         </div>
 
         <div className="px-4 md:px-8 lg:px-0 py-6 lg:py-12 flex flex-col lg:flex-row gap-8">
           <div className="w-full md:w-1/2 h-auto">
-            <img src={Scrub} className="w-full h-auto" />
+            <img
+              src={Scrub}
+              alt="Cascade Body Scrub"
+              className="w-full h-auto"
+            />
           </div>
           <div className="flex flex-col justify-center w-full md:w-1/2 text-lg font-extralight gap-6 px-8">
             <div>
