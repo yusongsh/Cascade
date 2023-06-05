@@ -26,13 +26,37 @@ const GalleryPage = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImageSrc, setLightboxImageSrc] = useState(null);
 
-  const handleImageClick = (src) => {
-    setLightboxImageSrc(src);
+  // const handleImageClick = (src) => {
+  //   setLightboxImageSrc(src);
+  //   setLightboxOpen(true);
+  // };
+
+  // const closeLightbox = () => {
+  //   setLightboxOpen(false);
+  // };
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleImageClick = (index) => {
+    setActiveIndex(index);
     setLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
+    setActiveIndex(null);
+  };
+
+  const handlePrev = () => {
+    if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (activeIndex < gallery.length - 1) {
+      setActiveIndex(activeIndex + 1);
+    }
   };
 
   return (
@@ -58,7 +82,7 @@ const GalleryPage = () => {
             <div
               key={index}
               className="mb-2 cursor-pointer"
-              onClick={() => handleImageClick(photo.url)}
+              onClick={() => handleImageClick(index)}
             >
               <img src={photo.url} alt={photo.description} />
             </div>
@@ -68,7 +92,9 @@ const GalleryPage = () => {
           <Lightbox
             isOpen={lightboxOpen}
             onRequestClose={closeLightbox}
-            src={lightboxImageSrc}
+            src={gallery[activeIndex]?.url}
+            onPrev={handlePrev}
+            onNext={handleNext}
           />
         )}
       </section>
