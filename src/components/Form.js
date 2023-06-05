@@ -6,7 +6,7 @@ const Form = () => {
 
   return (
     <>
-      <div className="w-full bg-main-bg-service h-32 lg:h-48 mt-16 mb-8 flex items-center justify-center">
+      <div className="w-full bg-main-bg-service h-48 mt-16 mb-8 flex items-center justify-center">
         <form
           name="email-signup"
           method="POST"
@@ -22,10 +22,10 @@ const Form = () => {
             name="email"
             placeholder="Enter your email"
             required
-            className="border-gray-400 text-sm pl-4 py-3 lg:pl-6 lg:py-4 pr-16 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
+            className="border-gray-400 text-sm pl-6 py-4 pr-20 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
           />
           <button
-            className="bg-main-gold text-white px-6 py-3 lg:py-4 text-sm"
+            className="bg-main-gold text-white px-6 py-4 text-sm"
             type="submit"
           >
             Sign up

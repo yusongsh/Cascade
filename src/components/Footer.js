@@ -14,16 +14,10 @@ const Footer = ({ phone }) => {
             <img src={birdcage} className="w-[8rem] h-auto " />
           </div>
           <div className="flex flex-col items-end py-6">
-            <a
-              href="https://www.google.com/maps/place/Cascade+Spa/@32.7476271,-117.1606362,17z/data=!4m15!1m8!3m7!1s0x80d954da95da6b9d:0xad2e78a4390517c8!2s3838+Fifth+Ave,+San+Diego,+CA+92103!3b1!8m2!3d32.7476271!4d-117.1606362!16s%2Fg%2F11c4tn_f2x!3m5!1s0x80d954c52ca0bd85:0x6a7cf7b44113a1b6!8m2!3d32.7476448!4d-117.1605705!16s%2Fg%2F12vtlljk7?entry=ttu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              3838 5th Ave, San Diego, CA
-            </a>
-            <div className="flex flex-col">
-              <a href="tel:619-542-9778">(619) 542-9778</a>
-              <a href="tel:619-326-8029">(619) 326-8029</a>
+            <p>3838 5th Ave, San Diego, CA</p>
+            <div>
+              <p>(619) 542-9778</p>
+              <p>(619) 326-8029</p>
             </div>
             <p>Call to Reserve Appointment!</p>
           </div>
