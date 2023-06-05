@@ -4,7 +4,7 @@ import CascadeBird from "../assets/Cascade_birds.png";
 import homesection from "../assets/Cascade Spa Images-28.jpg";
 import Carousel from "../components/Carousal";
 import serviceimage from "../images/cascade-service.jpg";
-import packageimage from "../images/cascade-service-2.jpg";
+import packageimage from "../images/cascade-service 2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Form from "../components/Form";
@@ -178,7 +178,7 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-20 pt-16">
+          <div className="flex flex-col md:flex-row gap-20 py-16">
             <div className="w-80 h-auto bg-main-bg-service shadow-md">
               <div className="h-[45%] overflow-hidden">
                 <img
@@ -188,11 +188,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/services">
-                <div className="h-[55%] flex flex-col  items-center p-4 lg:p-8">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
                   <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
                     SERVICES
                   </h2>
-                  <p className="text-sm text-center font-thin">
+                  <p className="text-xs text-center font-thin">
                     With our highly trained and certified therapists, we
                     understand your body's healing needs. We provide a wide
                     variety of exceptional services include massage,
@@ -210,11 +210,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/packages">
-                <div className="h-[55%] flex flex-col items-center p-4 lg:p-8 ">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
                   <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
                     PACKAGES
                   </h2>
-                  <p className="text-sm text-center font-thin">
+                  <p className="text-xs text-center font-thin">
                     Whatever your reason for visiting, there is always a package
                     fits your needs - from a Head-to-Toe, our packages include
                     multiple great valued services that will guarantee your body
