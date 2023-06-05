@@ -16,7 +16,7 @@ const Navbar = () => {
     { title: "Packages", to: "/packages" },
     { title: "Plan Your Day", to: "/planyourday" },
     { title: "Gallery", to: "/gallery" },
-    { title: "Contact", to: "/contact" },
+    // { title: "Contact", to: "/contact" },//not sure is this is nessasry for the website
     { title: "About", to: "/about" },
     { title: "Facials & More", to: "/facial" },
   ];
