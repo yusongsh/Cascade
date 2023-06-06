@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../components/Layout";
 import CascadeBird from "../assets/Cascade_birds.png";
 import homesection from "../assets/Cascade Spa Images-28.jpg";
-import Carousel from "../components/Carousal";
+import homeHero from "../assets/Cascade_Spa_Images-16.jpg";
 import serviceimage from "../images/cascade-service.jpg";
-import packageimage from "../images/cascade-service 2.jpg";
+import packageimage from "../images/Cascade-service-2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Form from "../components/Form";
@@ -45,10 +45,14 @@ const IndexPage = () => {
     <Layout phone={homepage.phone}>
       <main className="pt-[-40px]">
         <section className="">
-          <Carousel />
+          <img
+            src={homeHero}
+            alt="section title hero bg"
+            className="w-full h-[28rem] lg:h-[700px] object-cover"
+          />
         </section>
 
-        <section className="py-24 flex flex-col items-center">
+        <section className="py-8 lg:py-24 flex flex-col items-center">
           <div className="-z-10 absolute opacity-40 lg:opacity-80 left-[10%] md:left-[15%] lg:left-[25%]">
             <img
               src={CascadeBird}
@@ -60,10 +64,10 @@ const IndexPage = () => {
           <h2 className="text-lg font-title font-extralight tracking-wide">
             WE GLADY ACCEPT APPOINTMENTS
           </h2>
-          <h1 className="py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
+          <h1 className="py-12 lg:py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
             <span>Refresh,</span> <span>Relax, Rejuvenate</span>
           </h1>
-          <div className="px-6 flex flex-col items-center gap-4 lg:gap-6 text-center max-w-4xl font-title text-sm font-extralight lg:text-base">
+          <div className="px-6 flex flex-col items-center gap-6 lg:gap-8 text-center max-w-4xl font-title text-sm font-light lg:text-base tracking-wide">
             <p>
               We invite our guests to indulge in the ultimate upscale RESORT
               which is centrally located in the heart of Hillcrest. Enveloped in
@@ -164,7 +168,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className="py-12 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
+        <section className="py-8 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
           <div className="relative w-80 h-auto">
             <img
               src={Tiltlebg}
@@ -188,11 +192,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/services">
-                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-4">
                   <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
                     SERVICES
                   </h2>
-                  <p className="text-xs text-center font-thin">
+                  <p className="text-sm text-center font-thin">
                     With our highly trained and certified therapists, we
                     understand your body's healing needs. We provide a wide
                     variety of exceptional services include massage,
@@ -210,11 +214,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/packages">
-                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-0">
+                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-4">
                   <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
                     PACKAGES
                   </h2>
-                  <p className="text-xs text-center font-thin">
+                  <p className="text-sm text-center font-thin">
                     Whatever your reason for visiting, there is always a package
                     fits your needs - from a Head-to-Toe, our packages include
                     multiple great valued services that will guarantee your body
@@ -226,7 +230,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <section className="py-12 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
+        <section className="py-8 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
           <div className="relative w-80 h-auto">
             <img
               src={Tiltlebg}

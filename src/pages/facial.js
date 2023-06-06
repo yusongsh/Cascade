@@ -43,7 +43,7 @@ const FacialPage = () => {
         <img
           src={FacialHero}
           alt="home hero bg"
-          className="w-full lg:max-h-[400px] object-cover "
+          className="w-full lg:max-h-[450px] object-cover "
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-auto">
           <img
