@@ -6,6 +6,8 @@ import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Layout from "../components/Layout";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import { Helmet } from "react-helmet";
+import { Link } from "gatsby";
 
 const PackagesPage = () => {
   const data = useStaticQuery(graphql`
@@ -47,6 +49,13 @@ const PackagesPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta
+          name="description"
+          content="Discover Cascade Spa's range of carefully curated spa packages, designed to provide a holistic wellness experience. Unwind and rejuvenate with our customized treatment bundles."
+        />
+      </Helmet>
+
       <section className="relative">
         <img
           src={packageHero}
@@ -107,6 +116,12 @@ const PackagesPage = () => {
           <p>* Bathing suits required for Jacuzzi.</p>
           <p>** Must be 21 years or older, ID required</p>
         </div>
+        <div className="border-b border-main-gold w-[100%] my-16"></div>
+
+        <div className="px-4 md:px-8 lg:px-0 mb-16 flex flex-row justify-between uppercase text-2xl font-titleBig underline underline-offset-8">
+          <Link to="/services">Services</Link>
+          <Link to="/facial">Facial</Link>
+        </div>
       </section>
     </Layout>
   );
@@ -114,4 +129,4 @@ const PackagesPage = () => {
 
 export default PackagesPage;
 
-export const Head = () => <title>Packages - Cascade Spa</title>;
+export const Head = () => <title>Packages | Cascade Spa</title>;

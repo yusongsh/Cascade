@@ -3,11 +3,18 @@ import Layout from "../components/Layout";
 import ContactHero from "../assets/Cascade_Spa_Images-17.jpg";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Mapbg from "../images/Cascade Spa Map location.png";
-import Form from "../components/Form";
+import { Helmet } from "react-helmet";
 
 const ContactPage = () => {
   return (
     <Layout>
+      <Helmet>
+        <meta
+          name="description"
+          content="Need more information about Cascade Spa? Get in touch with us. We're here to answer any questions about our services, bookings, and more. We'd love to hear from you!"
+        />
+      </Helmet>
+
       <section className="relative">
         <img
           src={ContactHero}
@@ -71,4 +78,4 @@ const ContactPage = () => {
 
 export default ContactPage;
 
-export const Head = () => <title>Contact - Cascade Spa</title>;
+export const Head = () => <title>Contact | Cascade Spa</title>;

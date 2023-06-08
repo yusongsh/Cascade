@@ -2,10 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import PlanDayHero from "../assets/Cascade_Spa_Images-5.jpg";
-import Plansection from "../assets/Cascade Spa Images-28.jpg";
 import Carousel from "../components/Carousal";
-
-import AboutHero from "../assets/Cascade_Spa_Images-27.jpg";
+import { Helmet } from "react-helmet";
 import Sauna from "../assets/Cascade Sauna.webp";
 import Jac from "../assets/Cascade-Jacuzzi.png";
 import Scrub from "../assets/Cascade scrub.webp";
@@ -14,6 +12,13 @@ import SaltSauna from "../assets/Cascade_Himalayan salt sauna.webp";
 const PlanYourDay = () => {
   return (
     <Layout>
+      <Helmet>
+        <meta
+          name="description"
+          content="Planning your day at Cascade Spa? Here's everything you need to know for a seamless and relaxing experience. From arrival to departure, we've got you covered."
+        />
+      </Helmet>
+
       <section className="relative">
         <img
           src={PlanDayHero}
@@ -184,4 +189,4 @@ const PlanYourDay = () => {
 
 export default PlanYourDay;
 
-export const Head = () => <title>Plan Your Day - Cascade Spa</title>;
+export const Head = () => <title>Plan Your Day | Cascade Spa</title>;

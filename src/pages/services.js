@@ -4,6 +4,7 @@ import CascadeCage from "../assets/Cascade-bird-cage-1.webp";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Layout from "../components/Layout";
 import { Link, graphql, useStaticQuery } from "gatsby";
+import { Helmet } from "react-helmet";
 
 const ServicesPage = () => {
   const data = useStaticQuery(graphql`
@@ -40,6 +41,13 @@ const ServicesPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta
+          name="description"
+          content="At Cascade Spa, we offer a variety of wellness services from massages and facials to body treatments. Explore our services and find the perfect treatment tailored to your needs."
+        />
+      </Helmet>
+
       <section className="relative">
         <img
           src={serviceHero}
@@ -131,7 +139,7 @@ const ServicesPage = () => {
 
         <div className="px-4 md:px-8 lg:px-0 mb-16 flex flex-row justify-between uppercase text-2xl font-titleBig underline underline-offset-8">
           <Link to="/packages">Package</Link>
-          <Link to="/Facial">Facial</Link>
+          <Link to="/facial">Facial</Link>
         </div>
       </section>
     </Layout>
@@ -140,4 +148,4 @@ const ServicesPage = () => {
 
 export default ServicesPage;
 
-export const Head = () => <title>Services - Cascade Spa</title>;
+export const Head = () => <title>Services | Cascade Spa</title>;

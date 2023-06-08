@@ -4,6 +4,7 @@ import Lightbox from "../components/Lightbox";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/Layout";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
+import { Helmet } from "react-helmet";
 
 const GalleryPage = () => {
   const data = useStaticQuery(graphql`
@@ -61,6 +62,12 @@ const GalleryPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta
+          name="description"
+          content="Explore the tranquil ambiance of Cascade Spa through our gallery. Discover our luxurious facilities and relaxing treatments in a serene environment"
+        />
+      </Helmet>
       <section className="pt-32 pb-12 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
         <div className="relative w-80 h-auto">
           <img
@@ -104,4 +111,4 @@ const GalleryPage = () => {
 
 export default GalleryPage;
 
-export const Head = () => <title>Gallery - Cascade Spa</title>;
+export const Head = () => <title>Gallery | Cascade Spa</title>;

@@ -8,6 +8,8 @@ import packageimage from "../images/Cascade-service-2.jpg";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Form from "../components/Form";
+import Sectionbg from "../assets/Cascade-Spa-Images-home-bg.png";
+import { Helmet } from "react-helmet";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -43,6 +45,12 @@ const IndexPage = () => {
 
   return (
     <Layout phone={homepage.phone}>
+      <Helmet>
+        <meta
+          name="description"
+          content="Cascade Spa is a Luxurious Spa in Hillcrest, San Diego Address: 3838 5th Ave San Diego, 92103 Tel: 619-542-9778 / 619-326-8029."
+        />
+      </Helmet>
       <main className="pt-[-40px]">
         <section className="">
           <img
@@ -89,6 +97,14 @@ const IndexPage = () => {
               aromas & take in the visual sights the moment you walk into this
               luxurious spa and secret hide-away.
             </p>
+          </div>
+
+          <div className="-z-10 absolute left-[10%] md:left-[40%] lg:left-[65%] top-[20%] lg:top-[28%]">
+            <img
+              src={Sectionbg}
+              alt="Cascade Bird"
+              className="lg:w-[33rem] h-auto"
+            />
           </div>
 
           <button className="mt-12 px-5 py-2 border-main-gold border-4 text-main-gold font-titleBig font-medium hover:bg-main-gold hover:text-white">
@@ -255,4 +271,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home - Cascade Spa</title>;
+export const Head = () => <title>Cascade Spa - San Diego</title>;

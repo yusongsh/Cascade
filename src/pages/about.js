@@ -152,4 +152,4 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-export const Head = () => <title>About - Cascade Spa</title>;
+export const Head = () => <title>About | Cascade Spa</title>;
