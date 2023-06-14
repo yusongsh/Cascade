@@ -75,7 +75,7 @@ const IndexPage = () => {
           <h1 className="py-12 lg:py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
             <span>Refresh,</span> <span>Relax, Rejuvenate</span>
           </h1>
-          <div className="px-6 flex flex-col items-center gap-6 lg:gap-8 text-center max-w-4xl font-title text-sm font-light lg:text-base tracking-wide">
+          <div className="px-6 flex flex-col items-center gap-6 lg:gap-8 text-center max-w-4xl font-title text-sm font-thin lg:text-base lg:tracking-wide">
             <p>
               We invite our guests to indulge in the ultimate upscale RESORT
               which is centrally located in the heart of Hillcrest. Enveloped in
@@ -112,7 +112,7 @@ const IndexPage = () => {
           </button>
         </section>
 
-        <section className="py-8 lg:py-24 px-6 max-w-6xl flex flex-col md:flex-row gap-8 lg:gap-12 justify-center items-center m-auto">
+        <section className="py-8 lg:py-24 px-6 max-w-6xl flex flex-col md:flex-row gap-8 lg:gap-12 justify-center items-center m-auto font-title">
           <div className="w-full md:w-1/2 h-auto lg:h-[36rem]">
             <img
               src={homesection}
@@ -121,10 +121,10 @@ const IndexPage = () => {
             />
           </div>
 
-          <div className="flex flex-col w-full md:w-1/2 text-lg font-extralight gap-6">
+          <div className="flex flex-col w-full md:w-1/2 lg:text-lg font-extralight text-base gap-4 lg:gap-6">
             <div className="grid grid-cols-3 gap-4">
               <h4 className="uppercase flex flex-col items-center">Address</h4>
-              <div className="col-span-2">
+              <div className="col-span-2 ml-6 lg:ml-0">
                 <p>3838 5th Ave</p>
                 <p>San Diego, 92103</p>
               </div>
@@ -137,7 +137,7 @@ const IndexPage = () => {
                 <div className="uppercase text-center">Parking</div>
                 <div className="text-sm text-center">Free</div>
               </div>
-              <p className="col-span-2">
+              <p className="col-span-2 ml-6 lg:ml-0">
                 {street}
                 <br />
                 Spots {spots}
@@ -152,14 +152,16 @@ const IndexPage = () => {
                 <p>Parking</p>
                 <p className="text-sm">1HR</p>
               </div>
-              <p className="col-span-2">{homepage.validateParking}</p>
+              <p className="col-span-2 ml-6 lg:ml-0">
+                {homepage.validateParking}
+              </p>
             </div>
 
             <div className="col-span-3 border-b border-main-gold w-full lg:w-10/12 lg:ml-4"></div>
 
             <div className="grid grid-cols-3 gap-4">
               <h4 className="uppercase flex flex-col items-center">Hours</h4>
-              <div className="col-span-2">
+              <div className="col-span-2 ml-6 lg:ml-0">
                 <div className="pb-4">
                   <p>Monday - Thursday</p>
                   <p>10AM-10PM</p>
@@ -175,7 +177,7 @@ const IndexPage = () => {
 
             <div className="grid grid-cols-3 gap-4">
               <h4 className="uppercase flex flex-col items-center">Phone</h4>
-              <div className="col-span-2">
+              <div className="col-span-2 ml-6 lg:ml-0">
                 {homepage.phone.map((phone, idx) => {
                   return <p key={idx}>{phone}</p>;
                 })}
@@ -198,9 +200,9 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-20 py-16">
-            <div className="w-80 h-auto bg-main-bg-service shadow-md">
-              <div className="h-[45%] overflow-hidden">
+          <div className="flex flex-col md:flex-row gap-20 pt-16">
+            <div className="w-80 lg:w-96 bg-main-bg-service shadow-md">
+              <div className="h-auto overflow-hidden">
                 <img
                   src={serviceimage}
                   alt="service background"
@@ -208,11 +210,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/services">
-                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-4">
-                  <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
+                <div className="h-auto flex flex-col items-center pt-7 p-8">
+                  <h2 className="text-[1.4rem] mb-4 font-titleBig text-main-gold">
                     SERVICES
                   </h2>
-                  <p className="text-sm text-center font-thin">
+                  <p className="font-title text-sm font-thin lg:text-base text-center">
                     With our highly trained and certified therapists, we
                     understand your body's healing needs. We provide a wide
                     variety of exceptional services include massage,
@@ -221,8 +223,8 @@ const IndexPage = () => {
                 </div>
               </Link>
             </div>
-            <div className="w-80 h-auto bg-main-bg-service shadow-md">
-              <div className="h-[45%] overflow-hidden">
+            <div className="w-80 lg:w-96 h-auto bg-main-bg-service shadow-md">
+              <div className="h-auto overflow-hidden">
                 <img
                   src={packageimage}
                   alt="package background"
@@ -230,11 +232,11 @@ const IndexPage = () => {
                 />
               </div>
               <Link to="/packages">
-                <div className="h-[55%] flex flex-col  items-center pt-8 px-8 pb-8 lg:pb-4">
-                  <h2 className="text-2xl mb-4 font-titleBig text-main-gold">
+                <div className="h-auto flex flex-col  items-center pt-7 p-8">
+                  <h2 className="text-[1.4rem] mb-4 font-titleBig text-main-gold">
                     PACKAGES
                   </h2>
-                  <p className="text-sm text-center font-thin">
+                  <p className="font-title text-sm font-thin lg:text-base text-center">
                     Whatever your reason for visiting, there is always a package
                     fits your needs - from a Head-to-Toe, our packages include
                     multiple great valued services that will guarantee your body
@@ -259,7 +261,7 @@ const IndexPage = () => {
               </span>
             </div>
           </div>
-          <div className="pt-4 font-thin text-sm opacity-50">
+          <div className="p-4 font-thin text-sm text-center lg:text-left opacity-50">
             <p>Sign up to receive email promotions, spa news, and more.</p>
           </div>
           <Form />

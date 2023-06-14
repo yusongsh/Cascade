@@ -91,15 +91,15 @@ const ServicesPage = () => {
                 key={index}
                 className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
               >
-                <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
+                <h2 className="text-lg lg:text-[1.4rem] font-titleBig text-main-gold uppercase">
                   {node.name}
                 </h2>
-                <div className="py-3 text-sm font-title font-extralight text-main-gold italic">
+                <div className="py-3 text-sm font-title font-light text-main-gold italic">
                   {" "}
                   <p>{node.price1}</p>
                   {node.price2 && <p>{node.price2}</p>}
                 </div>
-                <p className="pt-2 font-extralight font-title text-sm">
+                <p className="pt-2 font-light font-title text-sm">
                   {node.description.description}
                 </p>
               </div>
@@ -122,13 +122,13 @@ const ServicesPage = () => {
               key={index}
               className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
             >
-              <h2 className="text-base lg:text-xl font-titleBig text-main-gold">
+              <h2 className="text-lg lg:text-[1.4rem] font-titleBig text-main-gold uppercase">
                 {node.name}
               </h2>
-              <div className="py-3 text-sm font-title font-extralight text-main-gold italic">
+              <div className="py-3 text-sm font-title font-light text-main-gold italic">
                 <p>{node.price}</p>
               </div>
-              <p className="pt-2 font-extralight font-title text-sm">
+              <p className="pt-2 font-light font-title text-sm">
                 {node.description.description}
               </p>
             </div>

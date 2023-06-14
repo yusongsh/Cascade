@@ -15,6 +15,7 @@ const Form = () => {
             e.preventDefault();
             setShowPopup(true);
           }}
+          className="w-full lg:w-1/2 flex"
         >
           <input type="hidden" name="form-name" value="email-signup" />
           <input
@@ -22,10 +23,10 @@ const Form = () => {
             name="email"
             placeholder="Enter your email"
             required
-            className="border-gray-400 text-sm pl-6 py-4 pr-20 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
+            className="flex-grow border-gray-400 text-sm pl-6 py-4 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
           />
           <button
-            className="bg-main-gold text-white px-6 py-4 text-sm"
+            className="w-auto bg-main-gold text-white px-6 py-4 text-sm "
             type="submit"
           >
             Sign up

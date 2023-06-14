@@ -19,6 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        background_color: `#ffffff`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
