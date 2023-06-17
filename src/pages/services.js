@@ -91,7 +91,7 @@ const ServicesPage = () => {
                 key={index}
                 className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
               >
-                <h2 className="text-lg lg:text-[1.4rem] font-titleBig text-main-gold uppercase">
+                <h2 className="text-[1.4rem] lg:text-2xl font-titleBig text-main-gold uppercase">
                   {node.name}
                 </h2>
                 <div className="py-3 text-sm font-title font-light text-main-gold italic">
@@ -122,7 +122,7 @@ const ServicesPage = () => {
               key={index}
               className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
             >
-              <h2 className="text-lg lg:text-[1.4rem] font-titleBig text-main-gold uppercase">
+              <h2 className="text-[1.4rem] lg:text-2xl font-titleBig text-main-gold uppercase">
                 {node.name}
               </h2>
               <div className="py-3 text-sm font-title font-light text-main-gold italic">
