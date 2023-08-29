@@ -85,7 +85,7 @@ const PackagesPage = () => {
             <div className="my-8 lg:my-12 uppercase text-2xl lg:text-3xl font-titleBig">
               PACKAGE
             </div>
-            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[80%]">
+            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[65%]">
               <img src={CascadeCage} className="w-[5rem] h-auto" />
             </div>
           </div>

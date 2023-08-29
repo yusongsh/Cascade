@@ -12,6 +12,7 @@ const Navbar = () => {
   };
 
   const navItems = [
+    { title: "Home", to: "/" },
     { title: "Services", to: "/services" },
     { title: "Packages", to: "/packages" },
     { title: "Plan Your Day", to: "/planyourday" },

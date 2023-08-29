@@ -79,7 +79,7 @@ const ServicesPage = () => {
                 (Please call for more details.)
               </span>
             </div>
-            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[80%]">
+            <div className="-z-10 absolute opacity-60 lg:opacity-90 left-[80%] md:left-[80%] lg:left-[65%]">
               <img src={CascadeCage} className="w-[5rem] h-auto" />
             </div>
           </div>

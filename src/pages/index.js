@@ -75,7 +75,7 @@ const IndexPage = () => {
           <h1 className="py-12 lg:py-16 text-4xl font-titleBig uppercase flex flex-col items-center gap-4">
             <span>Refresh,</span> <span>Relax, Rejuvenate</span>
           </h1>
-          <div className="px-6 flex flex-col items-center gap-6 lg:gap-8 text-center max-w-4xl font-title text-sm font-thin lg:text-base lg:tracking-wide">
+          <div className="px-6 flex flex-col items-center gap-6 lg:gap-8 text-center max-w-4xl font-title text-sm font-light lg:text-base lg:tracking-wide">
             <p>
               We invite our guests to indulge in the ultimate upscale RESORT
               which is centrally located in the heart of Hillcrest. Enveloped in
@@ -121,7 +121,7 @@ const IndexPage = () => {
             />
           </div>
 
-          <div className="flex flex-col w-full md:w-1/2 lg:text-lg font-extralight text-base gap-4 lg:gap-6">
+          <div className="flex flex-col w-full md:w-1/2 lg:text-lg font-light text-base gap-4 lg:gap-6">
             <div className="grid grid-cols-3 gap-4">
               <h4 className="uppercase flex flex-col items-center">Address</h4>
               <div className="col-span-2 ml-6 lg:ml-0">
@@ -214,7 +214,7 @@ const IndexPage = () => {
                   <h2 className="text-[1.4rem] mb-4 font-titleBig text-main-gold">
                     SERVICES
                   </h2>
-                  <p className="font-title text-sm font-thin lg:text-base text-center">
+                  <p className="font-title text-sm font-light lg:text-base text-center">
                     With our highly trained and certified therapists, we
                     understand your body's healing needs. We provide a wide
                     variety of exceptional services include massage,
@@ -236,7 +236,7 @@ const IndexPage = () => {
                   <h2 className="text-[1.4rem] mb-4 font-titleBig text-main-gold">
                     PACKAGES
                   </h2>
-                  <p className="font-title text-sm font-thin lg:text-base text-center">
+                  <p className="font-title text-sm font-light lg:text-base text-center">
                     Whatever your reason for visiting, there is always a package
                     fits your needs - from a Head-to-Toe, our packages include
                     multiple great valued services that will guarantee your body
@@ -261,7 +261,7 @@ const IndexPage = () => {
               </span>
             </div>
           </div>
-          <div className="p-4 font-thin text-sm text-center lg:text-left opacity-50">
+          <div className="p-4 font-light text-base text-center lg:text-left opacity-50">
             <p>Sign up to receive email promotions, spa news, and more.</p>
           </div>
           <Form />

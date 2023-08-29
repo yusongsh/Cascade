@@ -40,7 +40,7 @@ const Form = () => {
                 Thank you for signing up! Click the links below to start
                 exploring our amazing services!
               </h2>
-              <div className="text-main-gold uppercase flex flex-row gap-6 mt-6 mb-4 underline">
+              <div className="text-main-gold uppercase flex flex-row justify-center items-center gap-6 my-6 underline">
                 <Link to="/services">
                   <h2>Services</h2>
                 </Link>
@@ -49,7 +49,7 @@ const Form = () => {
                 </Link>
               </div>
               <button
-                className=" mt-4 bg-main-gold hover:bg-main-gold/50 text-white font-title py-2 px-4"
+                className=" mt-4 bg-main-gold hover:bg-main-gold/50 text-white font-title py-2 px-4 mx-auto flex justify-center"
                 onClick={() => setShowPopup(false)}
               >
                 Close
