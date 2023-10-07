@@ -13,6 +13,7 @@ const ServicesPage = () => {
         edges {
           node {
             name
+            order
             price1
             price2
             description {
@@ -38,6 +39,17 @@ const ServicesPage = () => {
   const servicesData = data.allContentfulServices.edges;
   const scrubData = data.allContentfulScrub.edges;
   console.log(servicesData, scrubData);
+
+  //testing for all data by ascent order
+  const sortedEdges = data.allContentfulServices.edges.sort(
+    (a, b) => a.node.order - b.node.order
+  );
+  sortedEdges.map((edge) => {
+    const service = edge.node;
+
+    // Do something with each service data here
+    console.log(service.name);
+  });
 
   return (
     <Layout>
@@ -86,24 +98,27 @@ const ServicesPage = () => {
         </div>
         <div className="px-4 md:px-8 lg:px-0">
           <div className="grid-flow-row columns-1 md:columns-2 gap-32">
-            {servicesData.map(({ node }, index) => (
-              <div
-                key={index}
-                className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
-              >
-                <h2 className="text-[1.4rem] lg:text-2xl font-titleBig text-main-gold uppercase">
-                  {node.name}
-                </h2>
-                <div className="py-3 text-sm font-title font-light text-main-gold italic">
-                  {" "}
-                  <p>{node.price1}</p>
-                  {node.price2 && <p>{node.price2}</p>}
+            {sortedEdges.map((edge, index) => {
+              const service = edge.node;
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col mb-12 lg:mb-16 break-inside-avoid"
+                >
+                  <h2 className="text-[1.4rem] lg:text-2xl font-titleBig text-main-gold uppercase">
+                    {service.name}
+                  </h2>
+                  <div className="py-3 text-sm font-title font-light text-main-gold italic">
+                    {" "}
+                    <p>{service.price1}</p>
+                    {service.price2 && <p>{service.price2}</p>}
+                  </div>
+                  <p className="pt-2 font-light font-title text-sm">
+                    {service.description.description}
+                  </p>
                 </div>
-                <p className="pt-2 font-light font-title text-sm">
-                  {node.description.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

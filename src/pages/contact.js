@@ -4,6 +4,7 @@ import ContactHero from "../assets/Cascade_Spa_Images-17.jpg";
 import Tiltlebg from "../assets/Cascadep-Spa-title.png";
 import Mapbg from "../images/Cascade Spa Map location.png";
 import { Helmet } from "react-helmet";
+import MailchimpSubscribe from "../components/MailChimp/MailchimpSubscribe";
 
 const ContactPage = () => {
   return (
@@ -69,9 +70,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* <section className="py-8 px-6 max-w-5xl h-auto flex flex-col justify-center items-center m-auto">
-        <Form />
-      </section> */}
+      {/* <MailchimpSubscribe /> */}
     </Layout>
   );
 };

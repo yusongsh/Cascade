@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 const Form = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [email, setEmail] = useState("");
 
   return (
     <>
@@ -14,6 +15,7 @@ const Form = () => {
           onSubmit={(e) => {
             e.preventDefault();
             setShowPopup(true);
+            setEmail("");
           }}
           className="w-full lg:w-1/2 flex"
         >
@@ -23,6 +25,8 @@ const Form = () => {
             name="email"
             placeholder="Enter your email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="flex-grow border-gray-400 text-sm pl-6 py-4 lg:pr-40 focus:outline-none focus:border-main-gold bg-second-grey text-main-grey placeholder-main-grey"
           />
           <button
